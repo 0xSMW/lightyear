@@ -14,7 +14,7 @@ Lightyear helps you to write powerful integrations in a few lines of code. With 
 Create your project directory from our template.
 
 ```shell
-npx @runlightyear/cli create lightyear-integrations
+npx @runlightyear/cli create https://github.com/correct-repo-url.git
 ```
 
 ### Install dependencies
@@ -56,4 +56,28 @@ npm run deploy
 ## Documentation
 
 https://docs.runlightyear.com
+
+## Intercom Contacts API
+
+The Intercom Contacts API is implemented in the `@runlightyear/intercom` package. You can use this API to fetch contact information from Intercom.
+
+### Usage
+
+```typescript
+import { getContacts } from '@runlightyear/intercom/contacts';
+
+// Fetch contacts
+const contacts = await getContacts();
+```
+
+### Response
+
+The `getContacts` function returns a Promise that resolves to an array of contacts. Each contact is an object that includes the following properties:
+
+* `id`: The ID of the contact.
+* `name`: The name of the contact.
+* `email`: The email address of the contact.
+* `phone`: The phone number of the contact.
+
+Please note that the actual response may include additional properties as provided by the Intercom API.
 
